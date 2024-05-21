@@ -79,7 +79,7 @@ jobs:
 
     - name: Start program
       if: ${{ success() && matrix.os == 'ubuntu-latest' }}   
-      run: alloc
+      run: ${{ steps.strings.outputs.build-output-dir }}/alloc
         
     - name: Upload Release Asset Ubuntu
       if: ${{ success() && matrix.os == 'ubuntu-latest' }}    

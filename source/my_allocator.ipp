@@ -13,7 +13,7 @@ template <class T, size_t size>
 template <class U>
 AssocioPoolAllocator<T, size>::AssocioPoolAllocator(
     const AssocioPoolAllocator<U, size>& rhs) noexcept
-    :pool_{rhs.pool_}, pool_size_{rhs.pool_size_}, counter_{rhs.counter_}
+    :pool_{rhs.GetPool()}, pool_size_{rhs.GetPoolSize()}, counter_{rhs.GetCounter()}
 {}
 
 template <class T, size_t size>

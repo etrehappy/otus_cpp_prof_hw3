@@ -47,14 +47,15 @@ public:
 
     T* allocate(size_t);
     void deallocate(T*, size_t);
+    std::shared_ptr<void> GetPool() const { return pool_; }
+    size_t GetPoolSize() const { return pool_size_; }
+    std::shared_ptr<AllocatorCounter>  GetCounter() const { return counter_; }
 
     using propagate_on_container_copy_assignment = std::true_type;
     using propagate_on_container_move_assignment = std::true_type;
     using propagate_on_container_swap = std::true_type;
 
 private:
-    friend class AssocioPoolAllocator;
-
     size_t& GetAllocatedSize() const;
 
     size_t pool_size_;
