@@ -22,8 +22,8 @@ public:
     iterator back();
     iterator end();
 
-    template <typename T, class Allocator>
-    friend std::ostream& operator<<(std::ostream& out, ForwardList<T, Allocator>& rhs);
+    template <typename T_, class Allocator_> //declaration 'T' and 'Allocator' shadows template parameter
+    friend std::ostream& operator<<(std::ostream& out, ForwardList<T_, Allocator_>& rhs);
 
 private:
     struct Node;

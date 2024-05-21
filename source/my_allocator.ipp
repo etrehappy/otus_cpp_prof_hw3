@@ -56,7 +56,7 @@ void AssocioPoolAllocator<T, size>::deallocate(T* p, size_t n)
 {
     GetAllocatedSize() -= n; // deallocate all
 
-    p; // warning C4100: 'p': unreferenced formal parameter
+    (void)p; // warning C4100: 'p': unreferenced formal parameter
 }
 
 template <class T, size_t size>
