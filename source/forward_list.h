@@ -22,7 +22,7 @@ public:
     iterator back();
     iterator end();
 
-    template<typename T, class Allocator>
+    template <typename T, class Allocator>
     friend std::ostream& operator<<(std::ostream& out, ForwardList<T, Allocator>& rhs);
 
 private:

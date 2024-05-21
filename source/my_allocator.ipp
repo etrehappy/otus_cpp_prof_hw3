@@ -17,8 +17,8 @@ AssocioPoolAllocator<T, size>::AssocioPoolAllocator(
 {}
 
 template <class T, size_t size>
-typename AssocioPoolAllocator<T, size>::AssocioPoolAllocator& 
-AssocioPoolAllocator<T, size>::operator=(AssocioPoolAllocator<T, size>&& other) noexcept
+AssocioPoolAllocator<T, size>&  AssocioPoolAllocator<T, size>::operator=(
+    AssocioPoolAllocator<T, size>&& rhs) noexcept
 {
     if (&rhs == this)
         return *this;
